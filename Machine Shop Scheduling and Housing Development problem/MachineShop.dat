@@ -1,0 +1,25 @@
+set Job := 1 2 3 4 5  ; #set for job
+set Machine := 1 2 3 4 5 ; #set of machine
+
+param Setup:= # setup time
+1 30
+2 40
+3 50
+4 60
+5 20;
+
+param Time: 1  2  3   4  5:= #time take parameter
+1           42 70 93  0  0 
+2           0  85 45  0  0
+3           58 0  0   37 0
+4           58 0  55  0  38
+5           0  60 0   54 0;
+
+param P: 1  2  3  4  5:= #presence
+1        1  1  1  0  0
+2        0  1  1  0  0 
+3        1  0  0  1  0
+4        1  0  1  0  1
+5        0  1  0  1  0;
+
+

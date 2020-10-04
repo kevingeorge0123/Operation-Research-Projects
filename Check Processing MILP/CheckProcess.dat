@@ -1,0 +1,75 @@
+set Time := 1 2 3 4 5 6 7 8 9 10 ; #set for each hours
+set Full := F1 F2 F3; #set of shifts of full time workers
+set Part := P1 P2; # set of shifts of part time workers
+
+param Fullpay:= #pay for full time workers
+F1     160
+F2     160
+F3     160;
+
+param Partpay:=  #pay for part time workers
+P1     75
+P2     75;
+
+param Checks:= #checks processed by hour per machine
+1    500
+2    500
+3    500
+4    500
+5    500
+6    500
+7    500
+8    500
+9    500
+10   500;
+
+param MaxMachine:= #max number of workers in each hour which is equal to number of machine
+1    13
+2    13
+3    13
+4     13
+5     13
+6     13
+7     13
+8     13
+9     13
+10     13;
+
+param Received:= # checks received
+1    5000
+2    4000
+3    3000
+4     4000
+5     2500
+6     3000
+7     4000
+8     4500
+9     3500
+10    3000;
+
+param Minworker:= 3; #minimum workers
+
+param Iteration1: F1   F2   F3:= #presence of full time workers in each hour 
+1               1    0    0    
+2               1    1    0    
+3               1    1    1   
+4               1    1    1    
+5               1    1    1    
+6               1    1    1         
+7		         1    1    1          
+8	             1    1    1      
+9		         0    1    1         
+10		         0    0    1;
+
+param Iteration2: P1   P2:= #presence of part time workers in each hour
+1                0    0
+2                0    0
+3                0    0
+4                0    0 
+5                1    0
+6                1    1      
+7		          1    1      
+8	             1    1  
+9		          1    1     
+10		          0    1;
+
