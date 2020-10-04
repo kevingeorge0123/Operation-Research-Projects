@@ -1,0 +1,36 @@
+set NODES :=A B C D E F G H I J K Z;
+
+param: ARCS: cost:=
+A B 10
+A D 12
+A C 9
+B E 8
+B F 3.5
+D F 3
+D G 7
+C G 15
+G I 14
+G J 5
+E H 12
+F E 10
+F H 18
+F K 18
+F I 12
+I Z 4
+H K 3
+K Z 3
+J Z 2;
+
+param netDemand:=
+A -1
+B 0
+C 0
+D 0
+E 0
+F 0
+G 0
+H 0
+I 0
+J 0
+K 0
+Z 1;

@@ -1,0 +1,16 @@
+param: SUPPLIES: s:=
+PLANT1 35
+PLANT2 50
+PLANT3 40;
+
+param: DEMANDS: d:=
+City1 45
+City2 20
+City3 30
+City4 30;
+
+param c: City1 City2 City3 City4:=
+PLANT1	8	6	10	9
+PLANT2	9	12	13	7
+PLANT3	14	9	16	5;
+
