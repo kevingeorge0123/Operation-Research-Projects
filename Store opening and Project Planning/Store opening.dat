@@ -1,0 +1,44 @@
+set NODES :=Now P1 P2 P3 T1_1 T1_2 T1_3 T2_1 T2_2 T2_3 Open;
+set PREP :=P1 P2 P3;
+set TEACH1 :=T1_1 T1_2 T1_3;
+set TEACH2 :=T2_1 T2_2 T2_3;
+set SUBNODE1 :=Now P1 P2 P3 Open;
+
+param: ARCS: cost:=
+Now P1 300
+Now T1_1 500
+Now T2_1 800
+P1 P2 300
+P1 T1_2 500
+P1 T2_2 800
+P2 P3 300
+P2 T1_3 500
+P2 T2_3 800
+P3 Open 0
+T1_1 P2 300
+T1_1 T1_2 500
+T1_1 T2_2 800
+T2_1 P2 300
+T2_1 T1_2 500
+T2_1 T2_2 800
+T1_2 P3 300
+T1_2 T1_3 500
+T1_2 T2_3 800
+T2_2 P3 300
+T2_2 T1_3 500
+T2_2 T2_3 800
+T1_3 Open 0
+T2_3 Open 0;
+
+param netDemand:=
+Now -5
+P1 0
+P2 0
+P3 0
+Open 39;
+
+param minworker:=
+P1 2
+P2 5
+P3 10;
+    
